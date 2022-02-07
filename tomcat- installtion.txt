@@ -1,0 +1,66 @@
+
+install tomcat(catalina) package as well as java
+===============================
+1.when you run java application you need tomcat package.
+   I have lanuch one more ec2 server
+   And i have download tomcat package. Copy the link  and add to sh file
+2.And have write script file in your local repo
+  than push to scm remote repo at a time give some commands
+3.After login the machine than clone the script file. 
+    when you clone the repo install sh file
+  now install  tomcat package(software)
+4. now go to cd /opt/  folder
+aws
+rh
+tomcat
+cd tomcat/
+webapps::war files are stores in
+=======
+cd webapps/
+bin::binary/command:: start/stop/dump files
+==
+b cd bin/
+logs::any thing error occered check logs/ catalina.out-------log---all errors
+==
+cd log/
+check log files
+  cat catalina.out-log level
+	INFO
+	WARN
+	SEVERE
+	DEBUG
+and i have see one more file is ::cat localhost_access_log.2022-02-03.txt
+	and check status codes:200,404
+	protocal::
+	and check methods::ip adress/time/get/post/7 methods is there
+and create an one error 404
+	observe  the logs
+and i want last 10 line give one command
+ * tail localhost_access_log.2022-02-03.txt
+	* 10 lines
+*tail -f localhost_access_log.2022-02-03.txt
+	when user continously access the page you can get continously
+
+
+		
+
+
+config::change port number/configuration
+===
+1.tomcat stop start with systemctl
+2.create a file *cd/etc/systemd/system/tomcat.service
+3. i have add some data in tomcat.service file
+4.vi cd/etc/systemd/system/tomcat.service
+5.systemctl start tomcat
+6.systemctl stop tomcat
+this is have only 404 erroer
+grep -c "404" localhost_access_log.2022-02-03.t
+i want particular colum
+awk '{ print $6 }' localhost_access_log.2022-02-03.txt
+awk '{ print $5 }' localhost_access_log.2022-02-03.txt
+awk '{ print $4 }' localhost_access_log.2022-02-03.txt
+awk '{ print $2 }' localhost_access_log.2022-02-03.txt
+awk '{ print $1 }' localhost_access_log.2022-02-03.txt
+
+
+

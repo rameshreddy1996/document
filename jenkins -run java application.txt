@@ -1,0 +1,72 @@
+now I want run java application
+=========================
+1.login   to ec2-user than switch to jenkins user
+	now i need insatll one package because of application based
+2.when you install mvn before which location you are there check it
+3.you know user install one  thirdparty software  you can go one thirdparty path
+ these are two 
+   1./opt
+    2./usr
+now i will prefer /opt
+cd /opt
+why we are use /
+in linux everything start with /
+inside / these are avilable
+opt
+home
+tmp
+usr
+var
+etc
+now you switch to opt to var what you have give command
+cd /var
+======
+ now what is your output:/var
+4.than download  the mavan package 
+download for give command
+use wget command/curl
+===================
+wget https://dlcdn.apache.org/maven/maven-3/3.8.4/binaries/apache-maven-3.8.4-bin.tar.gz
+befor install mavan
+switch to sudoers 
+cd /etc/sudoers.d/
+ vi 90-cloud-init-users
+ now change ec2-user to jenkins
+when install or not check[ls -l]
+ now extract the package tar file to war{ sudo tar -xvzf apache-maven-3.8.4-bin.tar.gz } 
+now create an one folder{apache-maven-3.8.4}
+change the folder like rename so use one command{sudo mv apache-maven-3.8.4 mvn}{ls -l}
+so remove old file{sudo rm -f apache-maven-3.8.4 mvn }
+cd /opt/maven/bin/
+check your package run or not
+./mvn
+cd /home
+/opt/maven/bin/mvn
+========================================================================================================================
+==================================
+maven is ready now 
+1. build the package == get from code scm to build w
+ first you want create  one folder inside creat number of jobs
+	1.1.source code management
+	=======================
+          and i want create one job 
+now go to scm bring the url and give it source code management with [ssh/httpd]
+{forkdash this is used for brings from one accout  repo to another account repo}
+and edit branch name{main/feature}
+			{/var/lib/jenkins/jobs/spring-petclinic/}=store job information= not code
+ when give an url than get code from to= {/var/lib/jenkins/workspace/spring-petclinic/}=store code this location
+ now here *.java/pom.xml files is avilable
+	1.2.build section
+	===============
+build shell give some commands:package the files
+/opt/maven/bin/mvn package
+              
+	
+  
+
+
+
+
+
+
+

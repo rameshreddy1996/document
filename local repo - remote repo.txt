@@ -1,0 +1,32 @@
+A a devops engineer how to run the application
+INFRA
+
+
+
+APPLICATION
+1.local----scm(github/gitlab/bitbucket,codecommit)---artifactory(ci)(s3,nexus)------deployement(jenkins)(cd)
+ 1.1local---scm (github)
+local-create repo
+once  you develop code
+scm(github)-create repo -The main purpose of scm store/share data
+As a developer develop code in your local using visual studio then push to code with git commands  
+git init-------this is path of localrepo to remote repo
+git add .()-----all files
+git add- --------file name(particular file)
+git commit -m'first commit'
+      ---"commit" means when you modify the file now identify that
+	git logs --visable old commit,modified commit,comit number/sha also
+	gitshow---you can give "gitshow commit number"  
+		now you can see what you have modified code
+git branch -M main
+	--- switch to main branch
+	in case,if you don't push main branch
+	now create developer,stage,feature branch(git checkout -b branch name)
+  git branch
+ git checkout branch name
+	identfied which branch
+	switch the branch
+git remote add origin git@github.com:rameshreddy1996/k8s.git
+ 	this command perform set the path local to remote.used two protocals(https/ssh)
+git push origin main
+	this command performed to push the files local repo to remote repo
